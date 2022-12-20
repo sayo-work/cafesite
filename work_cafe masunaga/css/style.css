@@ -113,6 +113,7 @@ body {
     line-height: 1.2;
     letter-spacing: 0.1em;
     margin-bottom: 43px;
+    font-weight: normal;
 }
 
 .main_text p {
@@ -121,28 +122,33 @@ body {
     line-height: 1.7;
 }
 
-/* こだわりの説明 */
+/* ABOUT US */
 .about_wrap {
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
+    align-items: center;
+    max-width: 1020px;
     margin: 0 auto;
     box-sizing: border-box;
     margin-bottom: 106px;
     padding: 0 10px 0;
 }
 
-.about_img img {
-    width: 500px;
-    height: 560px;
-    border-radius: 0 0 30px 0;
-    max-width: none;
+.about_img {
+    width: 50%;
     margin-right: 85px;
+}
+
+.about_text {
+    width: 50%;
+}
+
+.about_img img {
+    border-radius: 0 0 30px 0;
 }
 
 .about_text h2 {
     width: 272px;
-    height: 77px;
     margin: 67px 0 59px 0;
 }
 
@@ -150,6 +156,11 @@ body {
     font-size: 44px;
     line-height: 1.4;
     margin-bottom: 35px;
+    font-weight: normal;
+}
+
+.about_text p {
+    line-height: 1.6;
 }
 
 /* メニュー */
@@ -157,7 +168,6 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 49px;
-    box-sizing: border-box;
 }
 
 .menu_wrap h2 {
@@ -187,10 +197,12 @@ body {
     padding-left: 12px;
     margin-top: -9px;
     margin-bottom: 25px;
+    font-weight: normal;
 }
 
 .menu_content p {
     font-size: 17px;
+    line-height: 1.47;
 }
 
 /* ギャラリー */
@@ -215,6 +227,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 10px 0;
+    margin-bottom: 78px;
 }
 
 .event_wrap h2 {
@@ -224,28 +237,32 @@ body {
 }
 
 .event_text {
+    max-width: 1020px;
     border: 3.7px solid #4f260b;
     background-color: #fff;
     background-size: 1000px 200px;
-    margin-bottom: 78px;
+    box-sizing: border-box;
 }
 
 .event_text ul {
     font-size: 23px;
-    margin: 0 auto;
-    margin: 40px 0 43px 158px;
+    
+    margin: 0 16%;
+    padding: 40px 0;
 }
 
-.event_text li {
-    margin-bottom: 28px;
+.event_text li{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 25px;
 }
 
-.event_text li :last-child {
-    padding-bottom: none;
+.event_text ul li:last-child {
+    margin-bottom: 0;
 }
 
 .date {
-    margin-right: 56px;
+    padding-right: 56px;
 }
 
 .text {
@@ -272,7 +289,7 @@ footer {
 }
 
 .footer_wrap {
-    max-width: 1000px;
+    max-width: 1020px;
     margin: 0 auto;
     padding: 0 10px;
     box-sizing: border-box;
@@ -287,12 +304,15 @@ footer {
     margin-right: 34px;
 }
 
-.footer_wrap address {
+.footer_wrap ul {
     font-size: 20px;
     text-align: left;
     line-height: 1.95;
-    padding-top: 3px;
-    font-style: normal;
+    margin-top: 5px;
+}
+
+.footer_wrap ul li {
+    margin-bottom: 23px;
 }
 
 .copy {
