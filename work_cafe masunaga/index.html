@@ -8,13 +8,24 @@
     <title>カフェのサイト</title>
     <meta name="description" content="カフェのサイトです。">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header id="header">
         <div class="header_wrap">
-            <h1 class="logo"><img src="images/design_cafe_logo_header@2x.png" alt="江ノ島の静かなカフェ"></h1>
+            <h1><img src="images/design_cafe_logo_header@2x.png" alt="江ノ島の静かなカフェ"></h1>
             <nav class="pc_nav">
+                <ul>
+                    <li><a href="#about">ABOUT US </a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallary">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
                 <ul>
                     <li><a href="#about">ABOUT US </a></li>
                     <li><a href="#menu">MENU</a></li>
@@ -25,28 +36,53 @@
             </nav>
         </div>
         <div class="slider">
-            <p><img src="images/pc_first-100.jpg" alt="カフェの様子"></p>
+            <p>
+                <picture>
+                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/pc_first-100.jpg" alt="カフェの様子">
+                </picture>
+            </p>
         </div>
     </header>
-    <section class="title">
-        <div class="main_text">
-            <p>Have a happy day From a cup of coffee.</p>
-            <h2>ハッピーに溢れる1日を<br>1杯のコーヒーから。</h2>
-            <p>毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+    <section>
+        <div class="main_wrap">
+            <div class="main_text">
+                <h2>Have a happy day From a cup of coffee.</h2>
+                <h3>ハッピーに溢れる1日を<br>1杯のコーヒーから。</h3>
+                <p>毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+            </div>
+            <div class="sp_text">
+                <h2>Have a happy day From a cup of coffee.</h2>
+                <h3>ハッピーに溢れる1日を<br>1杯のコーヒーから。</h3>
+                <p>毎日を丁寧に大切に過ごしたい。<br>1だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間と<br>1こだわりのコーヒーを提供したい。</p>
+            </div>
         </div>
     </section>
 
     <section id="about">
         <div class="about_wrap">
             <div class="about_img">
-                <img src="images/pc_about-100.jpg" alt="こだわりのコーヒー写真">
+                <picture>
+                    <source srcset="images/about_us@2x.png" media="(max-width:767px)">
+                    <img src="images/pc_about-100.jpg" alt="こだわりのコーヒー写真">
+                </picture>
             </div>
             <div class="about_text">
-                <h2><img src="images/about_us@2x.png" alt="こだわりのコーヒー説明"></h2>
-                <h3>私たちが提供する<br>こだわりのコーヒー</h3>
-                <p>サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
-                </p>
+                <h2>
+                    <picture>
+                        <source srcset="images/pc_about-100.jpg" media="(max-width:767px)">
+                        <img src="images/about_us@2x.png" alt="こだわりのコーヒー説明">
+                    </picture>
+                </h2>
+                <div>
+                    <div class="about_box">
+                        <h3>私たちが提供する<br>こだわりのコーヒー</h3>
+                        <p>サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+                        </p>
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -128,12 +164,22 @@
                     <li>MAIL&colon;info@designcafe.tokyo</li>
                 </ul>
             </div>
-            <p class="copy">&copy;2021 DESIGN CAFE</p>
         </div>
+        <p class="copy">&copy;2021 DESIGN CAFE</p>
         <p class="toTop">
             <a href="#header"><img src="images/to_top@2x.png" alt="トップへ戻る"></a>
         </p>
     </footer>
+
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+        });
+
+    </script>
 </body>
 
 </html>
