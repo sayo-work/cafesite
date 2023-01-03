@@ -109,14 +109,14 @@ body {
     padding: 0 10px 0;
 }
     
-.main_text h2 {
+.main_wrap h2 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 55px;
     font-weight: normal;
 }
     
-.main_text h3 {
+.main_wrap h3 {
     font-size: 82px;
     text-align: center;
     line-height: 1.2;
@@ -125,13 +125,13 @@ body {
     font-weight: normal;
 }
     
-.main_text p {
+.main_wrap p {
     font-size: 23px;
     text-align: center;
     line-height: 1.7;
 }
    
-.sp_text{
+.br_sp{
     display: none;
 }
     
@@ -147,17 +147,26 @@ body {
     padding: 0 10px 0;
 }
 
-.about_img {
+.about_img{
     width: 50%;
+}
+
+.about_img >p{
+    width: 100%;
     margin-right: 85px;
+    border-radius: 0 0 30px 0;
+}
+
+.about_img h2{
+    display: none;
 }
 
 .about_text {
     width: 41%;
 }
 
-.about_img img {
-    border-radius: 0 0 30px 0;
+.about_text >p{
+    display: none;
 }
 
 .about_text h2 {
@@ -172,7 +181,8 @@ body {
     font-weight: normal;
 }
 
-.about_text p {
+.about_box p {
+    font-size: 16xp;
     line-height: 1.6;
 }
 
@@ -293,7 +303,7 @@ body {
 
 .access iframe {
     width: 100%;
-    height: 471px;
+    height: 191px;
 }
 
 /* フッターの箇所 */
@@ -304,13 +314,13 @@ footer {
 
 .footer_wrap {
     max-width: 100%;
-    margin: 0 auto;
     padding: 0 10px;
     box-sizing: border-box;
 }
 
 .footer_wrap>div {
     display: flex;
+    margin: 0 auto;
 }
 
 .footer_wrap img {
@@ -433,14 +443,14 @@ footer {
         margin: 42px 0 68px;
     }
 
-    .main_text h3{
+    .main_wrap h3{
         font-size: 70px;
     }
 
-    .main_text p{
+    .main_wrap p{
         font-size: 20px;
     }
-    
+
 /* ABOUT US */
     .about_box h3{
         font-size: 36px;
@@ -451,8 +461,8 @@ footer {
 /* ヘッダー */
     .sp_nav{
         position: absolute;
-        top: 22px;
-        left: 22px;
+        top: 0px;
+        left: 0px;
     }
 
     .sp_btn{
@@ -462,25 +472,21 @@ footer {
     }
 
 /* メイン */
-    .main_text{
-        display: none;
-    }
-
     .main_wrap{
         margin: 42px 0 65px;
     }
 
-    .sp_text{
+    .br_sp{
         display: block;
     }
 
-    .sp_text h2{
+    .main_wrap h2{
         font-size: 17px;
         margin-bottom: 30px;
         text-align: center;
     }
      
-    .sp_text h3 {
+    .main_wrap h3 {
         font-size: 38px;
         line-height: 1.2;
         letter-spacing: 0.02em;
@@ -489,7 +495,7 @@ footer {
         text-align: center;
     }
 
-    .sp_text p{
+    .main_wrap p{
         font-size: 16px;
         text-align: center;
         line-height: 1.7;
@@ -500,49 +506,42 @@ footer {
     .about_wrap {
         display: block;
         margin-bottom: 58px;
-        padding: 0;
-        }
-
-    .about_img{ 
-        margin: 0 auto;
-        margin-bottom: 18px;
+        padding: 0 ;
     }
 
-    .about_img img{
-        border-radius: 0;
+    .about_img{
+        display: none;
     }
 
     .about_text {
         width: 100%;
-    }
-    
-    .about_text img{
-        width: 100%;
         margin: 0 auto;
-        display: block;
-        margin-bottom: 36px;
     }
 
+    .about_text >p{
+        display: block;
+        margin: 0 auto;
+        padding: 0 0 18px 0;
+        width: 160px;
+
+    }
+    
     .about_text h2 {
         width: 100%;
-        margin: 0;
+        margin: 0 0 36px 0;
     }
 
-    .about_text >div{
-        text-align: center;
-        margin: 0 20px 0;
-    }
-    
     .about_box{
         display: inline-block;
         text-align: left;
+        margin: 0 20px 0;
     }
 
-    .about_box h3{
-        display: inline-block;
-        text-align: left;
+    .about_box h3 {
+        font-size: 36px;
+        margin-bottom: 35px;
     }
-    
+
 /* メニュー */
     .menu_wrap {
         margin: 0 auto;
@@ -551,6 +550,7 @@ footer {
     }
 
     .menu_wrap h2 {
+        width: 88px;
         margin: 0 auto;
         padding-bottom: 23px;
     }
@@ -582,6 +582,11 @@ footer {
     }
 
 /* ギャラリー */
+    .gallary_wrap h2 {
+        width: 142px;
+        margin: 0 auto;
+        margin-bottom: 21px;
+    }
     .gallary_wrap ul {
         display: block;
     }
@@ -596,6 +601,12 @@ footer {
         margin-bottom: 34px;
     }
 
+    .event_wrap h2 {
+        width: 101px;
+        margin: 0 auto;
+        margin-bottom: 21px;
+    }
+
     .event_text li{
         display: block;
     }
@@ -604,8 +615,13 @@ footer {
         display: block;
     }
 
+    .date{
+        display: block;
+    }
+
 /* アクセス */
     .access h2 {
+        width: 124px;
         margin-bottom: 11px;
     }
 
@@ -643,10 +659,7 @@ footer {
     }
 
     .toTop {
-        width: 125px;
-        position: fixed;
-        bottom: 205px;
-        right: 12px;
+        width: 100px;
     }
 
 }
