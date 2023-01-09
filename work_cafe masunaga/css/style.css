@@ -65,6 +65,7 @@ html{
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .header_wrap h1 {
@@ -89,11 +90,25 @@ html{
 .pc_nav ul li:last-child{
     margin-right: 0;
 }
-
+  
 .slider img{
     width: 100%;
 }
 
+/* スライダー調整 */
+.slick-dots{
+    bottom: 20px;
+}
+
+.slick-dots li.slick-active button:before{
+    color: #fff;
+    font-size: 15px;
+}
+
+.slick-dots li button:before {
+    color: #fff;
+    font-size: 15px;
+}
 
 .sp_nav {
     display: none;
@@ -102,7 +117,6 @@ html{
     display: none;
 }
 
-   
 /* メイン */
 body {
     background-color: #e8d9bf;
@@ -243,11 +257,24 @@ body {
     margin-bottom: 26px;
 }
 
-.gallary_wrap ul {
+.ul_slider {
     display: flex;
     margin: 0;
     padding: 0;
     width: 100%;
+}
+
+.slick-prev {
+    left: 230px;
+    z-index: 10;
+}
+
+.slick-next {
+    right: 250px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 40px;
 }
 
 /* イベント */
@@ -317,7 +344,7 @@ footer {
 .footer_wrap {
     display: flex;
     margin: 0 auto;
-    width: 1000px;
+    max-width: 1000px;
 }
 
 .footer_wrap img {
@@ -634,7 +661,7 @@ footer {
     .footer_wrap {
         display: block;
         padding: 48px 0;
-        width: 335px;
+        max-width: 335px;
         margin: 0 auto;
     }
     

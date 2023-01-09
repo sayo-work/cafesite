@@ -7,8 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>カフェのサイト</title>
     <meta name="description" content="カフェのサイトです。">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -40,6 +46,12 @@
                 <picture>
                     <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
                     <img src="images/pc_first-100.jpg" alt="カフェの様子">
+                </picture>
+            </p>
+            <p>
+                <picture>
+                    <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/slider_2.jpg" alt="カフェの様子">
                 </picture>
             </p>
         </div>
@@ -113,12 +125,13 @@
     <section id="gallary">
         <div class="gallary_wrap">
             <h2><img src="images/gallery@2x.png" alt="ギャラリーのロゴ"></h2>
-            <ul>
+            <ul class="ul_slider">
                 <li><img src="images/pc_gallary_05-100.jpg" alt="賑わうカフェ"></li>
                 <li><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></li>
                 <li><img src="images/pc_gallary_03-100.jpg" alt="カフェ店内風景"></li>
                 <li><img src="images/pc_gallary_02-100.jpg" alt="カフェ看板"></li>
                 <li><img src="images/pc_gallary_01-100.jpg" alt="カフェラテ作り"></li>
+                <li><img src="images/pc_gallary_03-100.jpg" alt="カフェ店内風景"></li>
             </ul>
         </div>
     </section>
@@ -166,13 +179,37 @@
 
     <script>
         $(function () {
+            // ハンバーガーメニュー
             $('.sp_btn').on('click', function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
             });
-        });
 
+            // スライダー
+            $('.slider').slick({
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+
+            $('.ul_slider').slick({
+                arrows: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
     </script>
+    <script type="text/javascript" src="js/lightbox.min.js">
+        <a href="images/pc_gallary_05-100.jpg" data-lightbox="cafeの様子" data-title="賑わうカフェ"><img src="images/pc_gallary_05-100.jpg" alt="賑わうカフェ"></a>
+    </script>
+
 </body>
 
 </html>
