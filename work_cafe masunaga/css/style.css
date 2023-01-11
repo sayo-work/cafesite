@@ -264,23 +264,22 @@ body {
     width: 100%;
 }
 
-.lb-data .lb-number{
-    display: none !important;
-}
-
 .slick-arrow {
     z-index: 1;
   }
-  
-  /* next */
-  .slick-next {
-    right: 26px;
+ 
+.slick-prev{
+    left: 30px;
+}
+
+.slick-next {
+    right: 30px;
   }
-  .slick-next::after {
-    right: 4px;
-    transform: rotate(45deg);
-  }
   
+/* モーダルウィンドウ */
+.lb-data .lb-number{
+    display: none !important;
+}
 
   @media screen and (max-width: 767px) {
     .slick-next::after,
