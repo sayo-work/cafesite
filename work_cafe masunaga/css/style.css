@@ -264,18 +264,40 @@ body {
     width: 100%;
 }
 
-.slick-prev {
-    left: 230px;
-    z-index: 10;
+.lb-data .lb-number{
+    display: none !important;
 }
 
-.slick-next {
-    right: 250px;
-}
+.slick-arrow {
+    z-index: 1;
+  }
+  
+  /* next */
+  .slick-next {
+    right: 26px;
+  }
+  .slick-next::after {
+    right: 4px;
+    transform: rotate(45deg);
+  }
+  
 
-.slick-prev:before, .slick-next:before {
-    font-size: 40px;
-}
+  @media screen and (max-width: 767px) {
+    .slick-next::after,
+    .slick-prev::after {
+      width: 10px;
+      height: 10px;
+    }
+    .slick-next {
+      right: 8px;
+    }
+    .slick-prev {
+      left: 8px;
+    }
+    .slick-next::after {
+      right: 2px;
+    }
+  }
 
 /* イベント */
 .event_wrap {

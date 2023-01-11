@@ -8,13 +8,12 @@
     <title>カフェのサイト</title>
     <meta name="description" content="カフェのサイトです。">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </head>
 
 <body>
@@ -126,12 +125,18 @@
         <div class="gallary_wrap">
             <h2><img src="images/gallery@2x.png" alt="ギャラリーのロゴ"></h2>
             <ul class="ul_slider">
-                <li><img src="images/pc_gallary_05-100.jpg" alt="賑わうカフェ"></li>
-                <li><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></li>
-                <li><img src="images/pc_gallary_03-100.jpg" alt="カフェ店内風景"></li>
-                <li><img src="images/pc_gallary_02-100.jpg" alt="カフェ看板"></li>
-                <li><img src="images/pc_gallary_01-100.jpg" alt="カフェラテ作り"></li>
-                <li><img src="images/pc_gallary_03-100.jpg" alt="カフェ店内風景"></li>
+                <li><a href="images/pc_gallary_05-100.jpg" data-lightbox="ギャラリー" data-title="賑わうカフェ"><img
+                            src="images/pc_gallary_05-100.jpg" alt="賑わうカフェ"></a></li>
+                <li><a href="images/pc_gallary_04-100.jpg" data-lightbox="ギャラリー" data-title="コーヒー豆"><img
+                            src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></a></li>
+                <li><a href="images/pc_gallary_03-100.jpg" data-lightbox="ギャラリー" data-title="カフェ店内風景"><img
+                            src="images/pc_gallary_03-100.jpg" alt="カフェ店内風景"></a></li>
+                <li><a href="images/pc_gallary_02-100.jpg" data-lightbox="ギャラリー" data-title="カフェ看板"><img
+                            src="images/pc_gallary_02-100.jpg" alt="カフェ看板"></a></li>
+                <li><a href="images/pc_gallary_01-100.jpg" data-lightbox="ギャラリー" data-title="カフェラテ作り"><img
+                            src="images/pc_gallary_01-100.jpg" alt="カフェラテ作り"></a></li>
+                <li><a href="images/pc_gallary_03-100.jpg" data-lightbox="ギャラリー" data-title="カフェ店内風景"><img
+                            src="images/pc_gallary_03-100.jpg" alt="カフェ店内風景"></a></li>
             </ul>
         </div>
     </section>
@@ -205,9 +210,6 @@
                 }]
             });
         });
-    </script>
-    <script src="js/lightbox.min.js">
-        <a href="images/pc_gallary_05-100.jpg" data-lightbox="album"><img src="images/pc_gallary_05-100.jpg" alt="賑わうカフェ"></a>
     </script>
 
 </body>
